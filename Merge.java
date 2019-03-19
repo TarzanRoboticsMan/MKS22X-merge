@@ -19,4 +19,38 @@ public class Merge{
       private static void mergesort(int[]data, int[]temp, int lo, int hi){}
   Pre-allocate a temp array in your mergesort wrapper method, and copy the data into it.
   */
+
+  /* Write a version of insertion sort that works on a sub-array, similar to merge and quicksort?
+e.g.
+insertionsort(data, lo, hi)
+
+The insertion sort is n^2, but has a low constant.
+
+
+Improve both your quicksort and your mergesort by using the insertion sort when you sub-array is sufficiently small.
+You can determine the best size to switch to insertion sort by experimentation.
+
+I will run your merge + quick again after you improve them.
+Improvements are ONLY improvements if all test cases passed. */
+
+  private void insertionsort(int[] data,int lo,int hi){
+    for(int x=lo+1;x++;x<hi){
+      for(int y=0;y--;data[x-y]<data[x-1-y] && x-y>lo){
+        int hold=data[x-y];
+        data[x-y]=data[x-1-y];
+        data[x-1-y]=hold;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
 }

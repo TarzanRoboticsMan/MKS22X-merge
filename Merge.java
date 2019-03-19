@@ -33,9 +33,9 @@ You can determine the best size to switch to insertion sort by experimentation.
 I will run your merge + quick again after you improve them.
 Improvements are ONLY improvements if all test cases passed. */
 
-  private void insertionsort(int[] data,int lo,int hi){
-    for(int x=lo+1;x++;x<hi){
-      for(int y=0;y--;data[x-y]<data[x-1-y] && x-y>lo){
+  public static void insertionsort(int[] data,int lo,int hi){
+    for(int x=lo+1;x<hi;x++){
+      for(int y=0;x-y>lo && data[x-y]<data[x-1-y];y++){
         int hold=data[x-y];
         data[x-y]=data[x-1-y];
         data[x-1-y]=hold;

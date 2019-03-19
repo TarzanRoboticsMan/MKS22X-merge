@@ -4,11 +4,11 @@ public class Driver{
   public static void main(String[]artie){
     /*
     java Driver 10000 test
-    java Driver 1000000 yeet
-    time java Driver 10000 selection
-    time java Driver 20000 selection
-    time java Driver 40000 selection
-    time java Driver 80000 selection
+    java Driver 1000000 test
+    time java Driver 10000
+    time java Driver 20000
+    time java Driver 40000
+    time java Driver 80000
     */
     int arraySize = Integer.parseInt(artie[0]);
 
@@ -19,8 +19,8 @@ public class Driver{
 
     if(artie[1].equals("test")){
       int[] randishTrue = Arrays.copyOf(randish,randish.length);
-      Arrays.sort(randish);
-      Merge.insertionsort(randishI);
+      Arrays.sort(randishTrue);
+      Merge.insertionsort(randish,0,arraySize);
 
       if( Arrays.equals(randish,randishTrue)){
         System.out.println("Insertion Correct!");
@@ -30,7 +30,7 @@ public class Driver{
       }
     }
     else{
-      Merge.insertionSort(randish);
+      Merge.insertionsort(randish,0,arraySize);
     }
   }
 }
